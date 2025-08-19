@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lalit Digital Stores - Premium AI hardware, dev-kits, and research services. Built for engineers.">
+<meta property="og:title" content="Lalit Digital Stores - AI Research & Smart Devices">
+<meta property="og:description" content="Premium AI hardware, dev-kits, and research services. Built for engineers.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
+<meta property="og:url" content="https://lalitdigitalstores.com">
+<title>Lalit Digital Stores - AI Research & Smart Devices</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* CSS Variables for easy theming */
+:root {
+--primary: #0f172a;
+--accent: #7c3aed;
+--light: #f8fafc;
+--gray: #94a3b8;
+--dark-gray: #334155;
+--success: #10b981;
+--error: #ef4444;
+--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+--shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+--rounded-sm: 0.25rem;
+--rounded: 0.5rem;
+--rounded-lg: 0.75rem;
+--rounded-xl: 1rem;
+--transition: all 0.2s ease;
+}
+
+/* Base Styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', sans-serif;
+color: var(--primary);
+line-height: 1.6;
+background-color: var(--light);
+overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+font-family: 'Poppins', sans-serif;
+font-weight: 600;
+line-height: 1.3;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+
+button {
+cursor: pointer;
+font-family: inherit;
+border: none;
+background: none;
+}
+
+/* Layout */
+.container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 1.5rem;
+}
+
+section {
+padding: 5rem 0;
+}
+
+.section-title {
+font-size: 2rem;
+margin-bottom: 2rem;
+text-align: center;
+position: relative;
+}
+
+.section-title::after {
+content: '';
+display: block;
+width: 80px;
+height: 4px;
+background: var(--accent);
+margin: 1rem auto 0;
+border-radius: 2px;
+}
+
+/* Header */
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+background-color: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+box-shadow: var(--shadow-sm);
+z-index: 100;
+transition: var(--transition);
+}
+
+header.scrolled {
+padding: 0.5rem 0;
+}
+
+.header-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1.5rem 0;
+transition: var(--transition);
+}
+
+header.scrolled .header-container {
+padding: 0.5rem 0;
+}
+
+.logo {
+font-family: 'Poppins', sans-serif;
+font-weight: 700;
+font-size: 1.5rem;
+color: var(--primary);
+}
+
+.logo span {
+color: var(--accent);
+}
+
+nav ul {
+display: flex;
+list-style: none;
+gap: 2rem;
+}
+
+nav a {
+font-weight: 500;
+transition: var(--transition);
+position: relative;
+}
+
+nav a:hover {
+color: var(--accent);
+}
+
+nav a::after {
+content: '';
+position: absolute;
+bottom: -4px;
+left: 0;
+width: 0;
+height: 2px;
+background: var(--accent);
+transition: var(--transition);
+}
+
+nav a:hover::after {
+width: 100%;
+}
+
+.cart-icon {
+position: relative;
+font-size: 1.25rem;
+}
+
+.cart-count {
+position: absolute;
+top: -8px;
+right: -8px;
+background: var(--accent);
+color: white;
+width: 18px;
+height: 18px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 0.7rem;
+font-weight: 600;
+}
+
+.mobile-menu-btn {
+display: none;
+font-size: 1.5rem;
+background: none;
+color: var(--primary);
+}
+
+/* Hero */
+.hero {
+height: 100vh;
+min-height: 600px;
+background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)),
+url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+color: white;
+display: flex;
+align-items: center;
+text-align: center;
+padding-top: 80px;
+}
+
+.hero-content {
+max-width: 800px;
+margin: 0 auto;
+padding: 0 1.5rem;
+}
+
+.hero h1 {
+font-size: 3rem;
+margin-bottom: 1.5rem;
+line-height: 1.2;
+}
+
+.hero p {
+font-size: 1.25rem;
+margin-bottom: 2rem;
+opacity: 0.9;
+}
+
+.btn {
+display: inline-block;
+padding: 0.75rem 1.75rem;
+background: var(--accent);
+color: white;
+border-radius: var(--rounded-lg);
+font-weight: 600;
+transition: var(--transition);
+box-shadow: var(--shadow);
+}
+
+.btn:hover {
+transform: translateY(-2px);
+box-shadow: var(--shadow-lg);
+}
+
+.btn-outline {
+background: transparent;
+border: 2px solid white;
+margin-left: 1rem;
+}
+
+.btn-outline:hover {
+background: white;
+color: var(--primary);
+}
+
+/* Products */
+.products-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+margin-top: 3rem;
+}
+
+.product-card {
+background: white;
+border-radius: var(--rounded-lg);
+overflow: hidden;
+box-shadow: var(--shadow);
+transition: var(--transition);
+}
+
+.product-card:hover {
+transform: translateY(-5px);
+box-shadow: var(--shadow-lg);
+}
+
+.product-img {
+height: 200px;
+width: 100%;
+object-fit: cover;
+}
+
+.product-info {
+padding: 1.5rem;
+}
+
+.product-title {
+font-size: 1.25rem;
+margin-bottom: 0.5rem;
+}
+
+.product-price {
+font-weight: 700;
+color: var(--accent);
+margin: 0.5rem 0;
+font-size: 1.25rem;
+}
+
+.product-desc {
+color: var(--gray);
+margin-bottom: 1rem;
+font-size: 0.9rem;
+}
+
+.rating {
+color: #fbbf24;
+margin-bottom: 1rem;
+font-size: 0.9rem;
+}
+
+.add-to-cart {
+width: 100%;
+padding: 0.5rem;
+background: var(--primary);
+color: white;
+border-radius: var(--rounded-sm);
+font-weight: 500;
+transition: var(--transition);
+}
+
+.add-to-cart:hover {
+background: var(--accent);
+}
+
+/* About */
+.about {
+background: #f1f5f9;
+}
+
+.about-content {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 3rem;
+align-items: center;
+}
+
+.about-img {
+border-radius: var(--rounded-lg);
+box-shadow: var(--shadow-lg);
+}
+
+.about-text h2 {
+font-size: 2rem;
+margin-bottom: 1.5rem;
+}
+
+.about-text p {
+margin-bottom: 1rem;
+color: var(--dark-gray);
+}
+
+/* Contact */
+.contact-form {
+max-width: 600px;
+margin: 0 auto;
+background: white;
+padding: 2rem;
+border-radius: var(--rounded-lg);
+box-shadow: var(--shadow);
+}
+
+.form-group {
+margin-bottom: 1.5rem;
+}
+
+.form-group label {
+display: block;
+margin-bottom: 0.5rem;
+font-weight: 500;
+}
+
+.form-control {
+width: 100%;
+padding: 0.75rem 1rem;
+border: 1px solid #e2e8f0;
+border-radius: var(--rounded-sm);
+font-family: inherit;
+transition: var(--transition);
+}
+
+.form-control:focus {
+outline: none;
+border-color: var(--accent);
+box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+}
+
+textarea.form-control {
+min-height: 150px;
+resize: vertical;
+}
+
+.form-error {
+color: var(--error);
+font-size: 0.875rem;
+margin-top: 0.25rem;
+display: none;
+}
+
+/* Cart */
+.cart-container {
+max-width: 800px;
+margin: 0 auto;
+background: white;
+padding: 2rem;
+border-radius: var(--rounded-lg);
+box-shadow: var(--shadow);
+}
+
+.cart-items {
+margin-bottom: 2rem;
+}
+
+.cart-item {
+display: grid;
+grid-template-columns: 80px 1fr auto;
+gap: 1.5rem;
+padding: 1.5rem 0;
+border-bottom: 1px solid #e2e8f0;
+}
+
+.cart-item:last-child {
+border-bottom: none;
+}
+
+.cart-item-img {
+width: 80px;
+height: 80px;
+object-fit: cover;
+border-radius: var(--rounded-sm);
+}
+
+.cart-item-info h3 {
+font-size: 1.1rem;
+margin-bottom: 0.5rem;
+}
+
+.cart-item-price {
+font-weight: 600;
+color: var(--accent);
+margin-bottom: 0.5rem;
+}
+
+.cart-item-actions {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.quantity-btn {
+width: 30px;
+height: 30px;
+border-radius: 50%;
+background: #f1f5f9;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: 600;
+transition: var(--transition);
+}
+
+.quantity-btn:hover {
+background: var(--accent);
+color: white;
+}
+
+.quantity {
+font-weight: 600;
+min-width: 30px;
+text-align: center;
+}
+
+.remove-item {
+color: var(--gray);
+font-size: 0.8rem;
+cursor: pointer;
+transition: var(--transition);
+}
+
+.remove-item:hover {
+color: var(--error);
+}
+
+.cart-summary {
+background: #f8fafc;
+padding: 1.5rem;
+border-radius: var(--rounded-lg);
+}
+
+.summary-row {
+display: flex;
+justify-content: space-between;
+margin-bottom: 0.75rem;
+}
+
+.summary-row.total {
+font-weight: 700;
+font-size: 1.1rem;
+margin-top: 1rem;
+padding-top: 1rem;
+border-top: 1px solid #e2e8f0;
+}
+
+.empty-cart {
+text-align: center;
+padding: 3rem 0;
+}
+
+.empty-cart i {
+font-size: 3rem;
+color: var(--gray);
+margin-bottom: 1rem;
+}
+
+.empty-cart p {
+margin-bottom: 1.5rem;
+color: var(--gray);
+}
+
+/* Modal */
+.modal {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(5px);
+display: flex;
+align-items: center;
+justify-content: center;
+z-index: 1000;
+opacity: 0;
+visibility: hidden;
+transition: var(--transition);
+}
+
+.modal.active {
+opacity: 1;
+visibility: visible;
+}
+
+.modal-content {
+background: white;
+width: 90%;
+max-width: 500px;
+border-radius: var(--rounded-lg);
+box-shadow: var(--shadow-xl);
+transform: translateY(20px);
+transition: var(--transition);
+}
+
+.modal.active .modal-content {
+transform: translateY(0);
+}
+
+.modal-header {
+padding: 1.5rem;
+border-bottom: 1px solid #e2e8f0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.modal-title {
+font-size: 1.25rem;
+font-weight: 600;
+}
+
+.close-modal {
+font-size: 1.5rem;
+background: none;
+color: var(--gray);
+transition: var(--transition);
+}
+
+.close-modal:hover {
+color: var(--primary);
+}
+
+.modal-body {
+padding: 1.5rem;
+}
+
+.modal-footer {
+padding: 1.5rem;
+border-top: 1px solid #e2e8f0;
+display: flex;
+justify-content: flex-end;
+gap: 1rem;
+}
+
+/* Product Quick View */
+.quick-view-content {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+}
+
+.quick-view-img {
+border-radius: var(--rounded-lg);
+}
+
+.quick-view-title {
+font-size: 1.5rem;
+margin-bottom: 1rem;
+}
+
+.quick-view-price {
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--accent);
+margin: 1rem 0;
+}
+
+.quick-view-desc {
+color: var(--gray);
+margin-bottom: 1.5rem;
+}
+
+/* Checkout */
+.checkout-form .form-group {
+margin-bottom: 1rem;
+}
+
+.payment-methods {
+margin: 1.5rem 0;
+}
+
+.payment-method {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+margin-bottom: 0.75rem;
+padding: 0.75rem;
+border: 1px solid #e2e8f0;
+border-radius: var(--rounded-sm);
+cursor: pointer;
+transition: var(--transition);
+}
+
+.payment-method:hover {
+border-color: var(--accent);
+}
+
+.payment-method.active {
+border-color: var(--accent);
+background: rgba(124, 58, 237, 0.05);
+}
+
+.payment-method i {
+font-size: 1.5rem;
+color: var(--accent);
+}
+
+/* Success */
+.success-message {
+text-align: center;
+padding: 3rem 0;
+}
+
+.success-message i {
+font-size: 4rem;
+color: var(--success);
+margin-bottom: 1.5rem;
+}
+
+.success-message h3 {
+font-size: 1.75rem;
+margin-bottom: 1rem;
+}
+
+.success-message p {
+color: var(--gray);
+margin-bottom: 1.5rem;
+}
+
+/* Legal Pages */
+.legal-content {
+max-width: 800px;
+margin: 0 auto;
+background: white;
+padding: 2rem;
+border-radius: var(--rounded-lg);
+box-shadow: var(--shadow);
+}
+
+.legal-content h2 {
+font-size: 1.5rem;
+margin: 2rem 0 1rem;
+}
+
+.legal-content h3 {
+font-size: 1.25rem;
+margin: 1.5rem 0 0.75rem;
+}
+
+.legal-content p, .legal-content ul {
+margin-bottom: 1rem;
+color: var(--dark-gray);
+}
+
+.legal-content ul {
+padding-left: 1.5rem;
+}
+
+/* Footer */
+footer {
+background: var(--primary);
+color: white;
+padding: 4rem 0 2rem;
+}
+
+.footer-content {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 3rem;
+margin-bottom: 3rem;
+}
+
+.footer-col h3 {
+font-size: 1.25rem;
+margin-bottom: 1.5rem;
+position: relative;
+}
+
+.footer-col h3::after {
+content: '';
+position: absolute;
+bottom: -8px;
+left: 0;
+width: 40px;
+height: 2px;
+background: var(--accent);
+}
+
+.footer-col p {
+margin-bottom: 1rem;
+opacity: 0.8;
+}
+
+.contact-info {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+margin-bottom: 0.75rem;
+}
+
+.contact-info i {
+color: var(--accent);
+}
+
+.social-links {
+display: flex;
+gap: 1rem;
+margin-top: 1.5rem;
+}
+
+.social-link {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+transition: var(--transition);
+}
+
+.social-link:hover {
+background: var(--accent);
+transform: translateY(-3px);
+}
+
+.footer-bottom {
+text-align: center;
+padding-top: 2rem;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+opacity: 0.7;
+font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+.products-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.about-content {
+grid-template-columns: 1fr;
+}
+
+.about-img {
+order: -1;
+}
+
+.footer-content {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 768px) {
+.header-container {
+padding: 1rem 0;
+}
+
+nav {
+position: fixed;
+top: 80px;
+left: 0;
+width: 100%;
+background: white;
+padding: 1.5rem;
+box-shadow: var(--shadow);
+transform: translateY(-150%);
+opacity: 0;
+transition: var(--transition);
+}
+
+nav.active {
+transform: translateY(0);
+opacity: 1;
+}
+
+nav ul {
+flex-direction: column;
+gap: 1rem;
+}
+
+.mobile-menu-btn {
+display: block;
+}
+
+.hero h1 {
+font-size: 2.5rem;
+}
+
+.hero p {
+font-size: 1.1rem;
+}
+
+.quick-view-content {
+grid-template-columns: 1fr;
+}
+
+.quick-view-img {
+max-height: 300px;
+width: 100%;
+object-fit: cover;
+}
+}
+
+@media (max-width: 576px) {
+section {
+padding: 3rem 0;
+}
+
+.products-grid {
+grid-template-columns: 1fr;
+}
+
+.footer-content {
+grid-template-columns: 1fr;
+}
+
+.cart-item {
+grid-template-columns: 1fr;
+gap: 1rem;
+}
+
+.cart-item-img {
+width: 100%;
+height: auto;
+max-height: 200px;
+}
+
+.hero h1 {
+font-size: 2rem;
+}
+
+.btn {
+display: block;
+width: 100%;
+margin-bottom: 1rem;
+}
+
+.btn-outline {
+margin-left: 0;
+}
+}
+</style>
+</head>
+<body>
+<!--
+README & REPLACE INSTRUCTIONS
+
+1. HOW TO PREVIEW:
+Simply open this index.html file in any modern web browser
+
+2. HOW TO REPLACE IMAGES:
+All images are loaded from Unsplash via direct URLs. To replace:
+- Hero image: Search for "hero" in CSS and replace the URL
+- Product images: Search for "product-img" and replace the URLs
+- About image: Search for "about-img" and replace the URL
+
+3. HOW TO CHANGE STORE INFO:
+Search for "/* REPLACE */" comments to find:
+- Store name, tagline
+- Contact info (email, phone, address)
+- Product details (titles, prices, descriptions)
+- Legal pages content
+
+4. WHERE TO ADD REAL PAYMENT INTEGRATION:
+Search for "PAYMENT INTEGRATION" comment in the JS section.
+Sample code for Razorpay is provided but commented out.
+-->
+
+<!-- Header -->
+<header id="header">
+<div class="container header-container">
+<a href="#home" class="logo">Lalit <span>Digital</span> Stores</a>
+
+<nav id="nav">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#shop">Shop</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#cart" class="cart-icon">
+<i class="fas fa-shopping-cart"></i>
+<span class="cart-count">0</span>
+</a></li>
+</ul>
+</nav>
+
+<button class="mobile-menu-btn" id="mobileMenuBtn">
+<i class="fas fa-bars"></i>
+</button>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+<div class="hero-content">
+<h1>AI Research & Smart Devices</h1>
+<p>Premium AI hardware, dev-kits, and research services. Built for engineers.</p>
+<div>
+<a href="#shop" class="btn">Browse Products</a>
+<a href="#about" class="btn btn-outline">Learn More</a>
+</div>
+</div>
+</section>
+
+<!-- Shop Section -->
+<section id="shop">
+<div class="container">
+<h2 class="section-title">Our Products</h2>
+
+<div class="products-grid">
+<!-- Product 1 -->
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AI Dev Kit" class="product-img">
+<div class="product-info">
+<h3 class="product-title">AI Dev Kit</h3>
+<p class="product-desc">Complete toolkit for AI development with pre-trained models and APIs.</p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+<span>(24)</span>
+</div>
+<p class="product-price">₹24,999</p>
+<button class="add-to-cart" data-id="1" data-name="AI Dev Kit" data-price="24999" data-img="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+</div>
+</div>
+
+<!-- Product 2 -->
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Edge TPU Module" class="product-img">
+<div class="product-info">
+<h3 class="product-title">Edge TPU Module</h3>
+<p class="product-desc">High-performance AI accelerator for edge computing applications.</p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="far fa-star"></i>
+<span>(18)</span>
+</div>
+<p class="product-price">₹18,500</p>
+<button class="add-to-cart" data-id="2" data-name="Edge TPU Module" data-price="18500" data-img="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+</div>
+</div>
+
+<!-- Product 3 -->
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Robotics Starter Kit" class="product-img">
+<div class="product-info">
+<h3 class="product-title">Robotics Starter Kit</h3>
+<p class="product-desc">Everything you need to build your first AI-powered robot.</p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<span>(32)</span>
+</div>
+<p class="product-price">₹32,750</p>
+<button class="add-to-cart" data-id="3" data-name="Robotics Starter Kit" data-price="32750" data-img="https://images.unsplash.com/photo-1593504049359-74330189a345?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+</div>
+</div>
+
+<!-- Product 4 -->
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Smart Camera" class="product-img">
+<div class="product-info">
+<h3 class="product-title">Smart Camera</h3>
+<p class="product-desc">AI-powered camera with real-time object and face recognition.</p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+<span>(27)</span>
+</div>
+<p class="product-price">₹15,999</p>
+<button class="add-to-cart" data-id="4" data-name="Smart Camera" data-price="15999" data-img="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+</div>
+</div>
+
+<!-- Product 5 -->
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Dataset Subscription" class="product-img">
+<div class="product-info">
+<h3 class="product-title">Dataset Subscription</h3>
+<p class="product-desc">Access to premium datasets for machine learning projects.</p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="far fa-star"></i>
+<span>(14)</span>
+</div>
+<p class="product-price">₹9,999/yr</p>
+<button class="add-to-cart" data-id="5" data-name="Dataset Subscription" data-price="9999" data-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+</div>
+</div>
+
+<!-- Product 6 -->
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Consultancy Hour" class="product-img">
+<div class="product-info">
+<h3 class="product-title">Consultancy Hour</h3>
+<p class="product-desc">Expert consultation for your AI/ML projects and research.</p>
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<span>(42)</span>
+</div>
+<p class="product-price">₹2,500/hr</p>
+<button class="add-to-cart" data-id="6" data-name="Consultancy Hour" data-price="2500" data-img="https://images.unsplash.com/photo-1600861195091-690c92f1d2cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80">Add to Cart</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+<div class="container">
+<h2 class="section-title">About Us</h2>
+
+<div class="about-content">
+<div class="about-text">
+<h2>Research-First Approach</h2>
+<p>Lalit Digital Stores is a premium AI research and development hub dedicated to creating cutting-edge hardware solutions for engineers and researchers. Our mission is to bridge the gap between academic research and practical implementation.</p>
+<p>Founded by Lalit Kumar, an AI researcher with over 5 years of experience in machine learning and embedded systems, we focus on delivering high-quality tools that accelerate innovation in the field of artificial intelligence.</p>
+<p>Our products are designed in-house and rigorously tested in our research lab to ensure they meet the demanding requirements of modern AI applications.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AI Research Lab" class="about-img">
+</div>
+</div>
+</section>
+
+<!-- Cart Section -->
+<section id="cart">
+<div class="container">
+<h2 class="section-title">Your Cart</h2>
+
+<div class="cart-container">
+<div class="cart-items" id="cartItems">
+<!-- Cart items will be dynamically inserted here -->
+<div class="empty-cart">
+<i class="fas fa-shopping-cart"></i>
+<h3>Your cart is empty</h3>
+<p>Browse our products and add items to your cart</p>
+<a href="#shop" class="btn">Continue Shopping</a>
+</div>
+</div>
+
+<div class="cart-summary" id="cartSummary" style="display: none;">
+<div class="summary-row">
+<span>Subtotal:</span>
+<span id="cartSubtotal">₹0</span>
+</div>
+<div class="summary-row">
+<span>GST (18%):</span>
+<span id="cartTax">₹0</span>
+</div>
+<div class="summary-row">
+<span>Shipping:</span>
+<span id="cartShipping">₹49</span>
+</div>
+<div class="summary-row total">
+<span>Total:</span>
+<span id="cartTotal">₹49</span>
+</div>
+
+<button class="btn" id="checkoutBtn" style="width: 100%; margin-top: 1.5rem;">Proceed to Checkout</button>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Checkout Modal -->
+<div class="modal" id="checkoutModal">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="modal-title">Complete Your Purchase</h3>
+<button class="close-modal" id="closeCheckoutModal">&times;</button>
+</div>
+
+<div class="modal-body">
+<div id="checkoutFormContainer">
+<form id="checkoutForm">
+<div class="form-group">
+<label for="name">Full Name</label>
+<input type="text" id="name" class="form-control" required>
+<div class="form-error" id="nameError">Please enter your name</div>
+</div>
+
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" class="form-control" required>
+<div class="form-error" id="emailError">Please enter a valid email</div>
+</div>
+
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input type="tel" id="phone" class="form-control" required>
+<div class="form-error" id="phoneError">Please enter a valid phone number</div>
+</div>
+
+<div class="form-group">
+<label for="address">Shipping Address</label>
+<textarea id="address" class="form-control" rows="3" required></textarea>
+<div class="form-error" id="addressError">Please enter your address</div>
+</div>
+
+<div class="payment-methods">
+<h4>Payment Method</h4>
+
+<div class="payment-method active" data-method="card">
+<i class="far fa-credit-card"></i>
+<span>Credit/Debit Card</span>
+</div>
+
+<div class="payment-method" data-method="upi">
+<i class="fas fa-mobile-alt"></i>
+<span>UPI Payment</span>
+</div>
+
+<div class="payment-method" data-method="netbanking">
+<i class="fas fa-university"></i>
+<span>Net Banking</span>
+</div>
+</div>
+</form>
+</div>
+
+<div id="paymentSuccess" style="display: none;">
+<div class="success-message">
+<i class="fas fa-check-circle"></i>
+<h3>Payment Successful!</h3>
+<p>Your order has been placed successfully. We'll send you a confirmation email shortly.</p>
+<a href="#home" class="btn">Back to Home</a>
+</div>
+</div>
+</div>
+
+<div class="modal-footer" id="checkoutModalFooter">
+<button class="btn" id="payNowBtn">Pay <span id="payAmount">₹0</span></button>
+</div>
+</div>
+</div>
+
+<!-- Product Quick View Modal -->
+<div class="modal" id="quickViewModal">
+<div class="modal-content">
+<div class="modal-header">
+<h3 class="modal-title">Product Details</h3>
+<button class="close-modal" id="closeQuickViewModal">&times;</button>
+</div>
+
+<div class="modal-body">
+<div class="quick-view-content" id="quickViewContent">
+<!-- Content will be dynamically inserted here -->
+</div>
+</div>
+
+<div class="modal-footer">
+<button class="btn" id="addToCartFromQuickView">Add to Cart</button>
+</div>
+</div>
+</div>
+
+<!-- Contact Section -->
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Contact Us</h2>
+
+<div class="contact-form">
+<form id="contactForm">
+<div class="form-group">
+<label for="contactName">Your Name</label>
+<input type="text" id="contactName" class="form-control" required>
+<div class="form-error" id="contactNameError">Please enter your name</div>
+</div>
+
+<div class="form-group">
+<label for="contactEmail">Email</label>
+<input type="email" id="contactEmail" class="form-control" required>
+<div class="form-error" id="contactEmailError">Please enter a valid email</div>
+</div>
+
+<div class="form-group">
+<label for="contactMessage">Message</label>
+<textarea id="contactMessage" class="form-control" required></textarea>
+<div class="form-error" id="contactMessageError">Please enter your message</div>
+</div>
+
+<button type="submit" class="btn" style="width: 100%;">Send Message</button>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Privacy Policy Section -->
+<section id="privacy">
+<div class="container">
+<h2 class="section-title">Privacy Policy</h2>
+
+<div class="legal-content">
+<p>Last updated: August 19, 2023</p>
+
+<h2>1. Information We Collect</h2>
+<p>We collect information you provide directly to us, such as when you create an account, make a purchase, or contact us. This may include:</p>
+<ul>
+<li>Personal identification information (Name, email address, phone number)</li>
+<li>Payment information (credit card details are processed by our payment processor and not stored by us)</li>
+<li>Shipping and billing address</li>
+</ul>
+
+<h2>2. How We Use Your Information</h2>
+<p>We use the information we collect to:</p>
+<ul>
+<li>Process and fulfill your orders</li>
+<li>Communicate with you about your orders and provide customer support</li>
+<li>Improve our products and services</li>
+<li>Comply with legal obligations</li>
+</ul>
+
+<h2>3. Data Security</h2>
+<p>We implement appropriate security measures to protect your personal information. However, no method of transmission over the Internet is 100% secure.</p>
+
+<h2>4. Your Rights</h2>
+<p>You have the right to:</p>
+<ul>
+<li>Access, update or delete your personal information</li>
+<li>Object to processing of your personal data</li>
+<li>Request restriction of processing your personal data</li>
+</ul>
+
+<h2>5. Contact Us</h2>
+<p>If you have questions about this Privacy Policy, please contact us at:</p>
+<p>Email: llkumar264@gmail.com<br>
+Phone: +91 97194 4089<br>
+Address: Dibai, Bulandshahr, Uttar Pradesh, India</p>
+</div>
+</div>
+</section>
+
+<!-- Terms of Service Section -->
+<section id="terms">
+<div class="container">
+<h2 class="section-title">Terms of Service</h2>
+
+<div class="legal-content">
+<p>Last updated: August 19, 2023</p>
+
+<h2>1. General Terms</h2>
+<p>By accessing and using Lalit Digital Stores, you accept and agree to be bound by these Terms of Service.</p>
+
+<h2>2. Products and Pricing</h2>
+<p>We reserve the right to change product prices and descriptions at any time without notice. We are not responsible for typographical errors regarding price or product information.</p>
+
+<h2>3. Orders and Payment</h2>
+<p>All orders are subject to product availability. We reserve the right to refuse or cancel any order for any reason.</p>
+
+<h2>4. Shipping and Returns</h2>
+<p>Shipping times are estimates and not guaranteed. Please review our return policy included with your shipment.</p>
+
+<h2>5. Intellectual Property</h2>
+<p>All content included on this site is the property of Lalit Digital Stores and protected by intellectual property laws.</p>
+
+<h2>6. Limitation of Liability</h2>
+<p>Lalit Digital Stores shall not be liable for any damages resulting from the use or inability to use our products or services.</p>
+
+<h2>7. Governing Law</h2>
+<p>These Terms shall be governed by the laws of India without regard to its conflict of law provisions.</p>
+
+<h2>8. Contact Information</h2>
+<p>For any questions about these Terms, please contact us at:</p>
+<p>Email: llkumar264@gmail.com<br>
+Phone: +91 97194 4089<br>
+Address: Dibai, Bulandshahr, Uttar Pradesh, India</p>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-col">
+<h3>Lalit Digital Stores</h3>
+<p>Premium AI hardware, dev-kits, and research services. Built for engineers.</p>
+<div class="social-links">
+<a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+<a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+<a href="#" class="social-link"><i class="fab fa-github"></i></a>
+<a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+</div>
+</div>
+
+<div class="footer-col">
+<h3>Quick Links</h3>
+<ul style="list-style: none;">
+<li><a href="#home">Home</a></li>
+<li><a href="#shop">Shop</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#privacy">Privacy Policy</a></li>
+<li><a href="#terms">Terms of Service</a></li>
+</ul>
+</div>
+
+<div class="footer-col">
+<h3>Contact Info</h3>
+<div class="contact-info">
+<i class="fas fa-map-marker-alt"></i>
+<span>Dibai, Bulandshahr, Uttar Pradesh, India</span>
+</div>
+<div class="contact-info">
+<i class="fas fa-envelope"></i>
+<span>llkumar264@gmail.com</span>
+</div>
+<div class="contact-info">
+<i class="fas fa-phone-alt"></i>
+<span>+91 97194 4089</span>
+</div>
+</div>
+</div>
+
+<div class="footer-bottom">
+<p>&copy; 2023 Lalit Digital Stores. All rights reserved.</p>
+</div>
+</div>
+</footer>
+
+<script>
+// DOM Elements
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const nav = document.getElementById('nav');
+const header = document.getElementById('header');
+const cartCount = document.querySelector('.cart-count');
+const addToCartBtns = document.querySelectorAll('.add-to-cart');
+const cartItemsContainer = document.getElementById('cartItems');
+const cartSummary = document.getElementById('cartSummary');
+const cartSubtotal = document.getElementById('cartSubtotal');
+const cartTax = document.getElementById('cartTax');
+const cartTotal = document.getElementById('cartTotal');
+const checkoutBtn = document.getElementById('checkoutBtn');
+const checkoutModal = document.getElementById('checkoutModal');
+const closeCheckoutModal = document.getElementById('closeCheckoutModal');
+const payNowBtn = document.getElementById('payNowBtn');
+const payAmount = document.getElementById('payAmount');
+const paymentSuccess = document.getElementById('paymentSuccess');
+const checkoutFormContainer = document.getElementById('checkoutFormContainer');
+const checkoutForm = document.getElementById('checkoutForm');
+const quickViewModal = document.getElementById('quickViewModal');
+const closeQuickViewModal = document.getElementById('closeQuickViewModal');
+const quickViewContent = document.getElementById('quickViewContent');
+const addToCartFromQuickView = document.getElementById('addToCartFromQuickView');
+const contactForm = document.getElementById('contactForm');
+
+// Cart state
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+// Initialize the app
+function init() {
+updateCartCount();
+renderCartItems();
+setupEventListeners();
+handleScroll();
+}
+
+// Set up event listeners
+function setupEventListeners() {
+// Mobile menu toggle
+mobileMenuBtn.addEventListener('click', () => {
+nav.classList.toggle('active');
+mobileMenuBtn.innerHTML = nav.classList.contains('active') ?
+'<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+});
+
+// Close mobile menu when clicking a link
+document.querySelectorAll('nav a').forEach(link => {
+link.addEventListener('click', () => {
+if (window.innerWidth <= 768) {
+nav.classList.remove('active');
+mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+}
+});
+});
+
+// Add to cart buttons
+addToCartBtns.forEach(btn => {
+btn.addEventListener('click', (e) => {
+const product = {
+id: e.target.dataset.id,
+name: e.target.dataset.name,
+price: parseInt(e.target.dataset.price),
+img: e.target.dataset.img,
+quantity: 1
+};
+
+addToCart(product);
+animateAddToCart(e.target);
+});
+
+// Quick view on product card click
+btn.parentElement.parentElement.addEventListener('click', (e) => {
+if (e.target === btn) return;
+
+const product = {
+id: btn.dataset.id,
+name: btn.dataset.name,
+price: parseInt(btn.dataset.price),
+img: btn.dataset.img,
+desc: btn.parentElement.querySelector('.product-desc').textContent,
+rating: btn.parentElement.querySelector('.rating').innerHTML
+};
+
+showQuickView(product);
+});
+});
+
+// Checkout modal
+checkoutBtn?.addEventListener('click', () => {
+showCheckoutModal();
+});
+
+closeCheckoutModal?.addEventListener('click', () => {
+checkoutModal.classList.remove('active');
+});
+
+// Pay now button
+payNowBtn?.addEventListener('click', processPayment);
+
+// Payment method selection
+document.querySelectorAll('.payment-method').forEach(method => {
+method.addEventListener('click', () => {
+document.querySelectorAll('.payment-method').forEach(m => m.classList.remove('active'));
+method.classList.add('active');
+});
+});
+
+// Contact form submission
+contactForm?.addEventListener('submit', handleContactSubmit);
+
+// Window scroll event for header
+window.addEventListener('scroll', handleScroll);
+
+// Close modals when clicking outside
+window.addEventListener('click', (e) => {
+if (e.target === checkoutModal) {
+checkoutModal.classList.remove('active');
+}
+if (e.target === quickViewModal) {
+quickViewModal.classList.remove('active');
+}
+});
+}
+
+// Handle scroll to shrink header
+function handleScroll() {
+if (window.scrollY > 50) {
+header.classList.add('scrolled');
+} else {
+header.classList.remove('scrolled');
+}
+}
+
+// Cart functions
+function addToCart(product) {
+const existingItem = cart.find(item => item.id === product.id);
+
+if (existingItem) {
+existingItem.quantity += 1;
+} else {
+cart.push(product);
+}
+
+updateCart();
+}
+
+function updateCart() {
+localStorage.setItem('cart', JSON.stringify(cart));
+updateCartCount();
+renderCartItems();
+}
+
+function updateCartCount() {
+const count = cart.reduce((total, item) => total + item.quantity, 0);
+cartCount.textContent = count;
+}
+
+function renderCartItems() {
+if (!cartItemsContainer) return;
+
+if (cart.length === 0) {
+cartItemsContainer.innerHTML = `
+<div class="empty-cart">
+<i class="fas fa-shopping-cart"></i>
+<h3>Your cart is empty</h3>
+<p>Browse our products and add items to your cart</p>
+<a href="#shop" class="btn">Continue Shopping</a>
+</div>
+`;
+cartSummary.style.display = 'none';
+return;
+}
+
+cartItemsContainer.innerHTML = '';
+cartSummary.style.display = 'block';
+
+cart.forEach(item => {
+const cartItem = document.createElement('div');
+cartItem.className = 'cart-item';
+cartItem.innerHTML = `
+<img src="${item.img}" alt="${item.name}" class="cart-item-img">
+<div class="cart-item-info">
+<h3>${item.name}</h3>
+<p class="cart-item-price">₹${item.price.toLocaleString()}</p>
+<div class="cart-item-actions">
+<button class="quantity-btn minus" data-id="${item.id}">-</button>
+<span class="quantity">${item.quantity}</span>
+<button class="quantity-btn plus" data-id="${item.id}">+</button>
+<span class="remove-item" data-id="${item.id}">Remove</span>
+</div>
+</div>
+<div class="cart-item-subtotal">
+<p>₹${(item.price * item.quantity).toLocaleString()}</p>
+</div>
+`;
+
+cartItemsContainer.appendChild(cartItem);
+});
+
+// Add event listeners to quantity buttons
+document.querySelectorAll('.quantity-btn.minus').forEach(btn => {
+btn.addEventListener('click', () => updateQuantity(btn.dataset.id, -1));
+});
+
+document.querySelectorAll('.quantity-btn.plus').forEach(btn => {
+btn.addEventListener('click', () => updateQuantity(btn.dataset.id, 1));
+});
+
+document.querySelectorAll('.remove-item').forEach(btn => {
+btn.addEventListener('click', () => removeItem(btn.dataset.id));
+});
+
+// Update cart summary
+updateCartSummary();
+}
+
+function updateQuantity(productId, change) {
+const item = cart.find(item => item.id === productId);
+
+if (item) {
+item.quantity += change;
+
+if (item.quantity <= 0) {
+cart = cart.filter(item => item.id !== productId);
+}
+
+updateCart();
+}
+}
+
+function removeItem(productId) {
+cart = cart.filter(item => item.id !== productId);
+updateCart();
+}
+
+function updateCartSummary() {
+const subtotal = cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+const tax = subtotal * 0.18; // 18% GST
+const shipping = 49;
+const total = subtotal + tax + shipping;
+
+cartSubtotal.textContent = `₹${subtotal.toLocaleString()}`;
+cartTax.textContent = `₹${tax.toLocaleString()}`;
+cartTotal.textContent = `₹${total.toLocaleString()}`;
+
+// Update pay amount in checkout modal
+if (payAmount) {
+payAmount.textContent = `₹${total.toLocaleString()}`;
+}
+}
+
+// Animation for add to cart
+function animateAddToCart(button) {
+const cartIcon = document.querySelector('.cart-icon');
+const buttonRect = button.getBoundingClientRect();
+const cartIconRect = cartIcon.getBoundingClientRect();
+
+const animation = document.createElement('div');
+animation.className = 'add-to-cart-animation';
+animation.style.position = 'fixed';
+animation.style.left = `${buttonRect.left + buttonRect.width / 2 - 10}px`;
+animation.style.top = `${buttonRect.top}px`;
+animation.style.width = '20px';
+animation.style.height = '20px';
+animation.style.backgroundColor = '#7c3aed';
+animation.style.borderRadius = '50%';
+animation.style.zIndex = '1000';
+animation.style.pointerEvents = 'none';
+
+document.body.appendChild(animation);
+
+const keyframes = [
+{
+transform: 'translateY(0) scale(1)',
+opacity: 1
+},
+{
+transform: `translateY(${cartIconRect.top - buttonRect.top - 20}px) translateX(${cartIconRect.left - buttonRect.left - buttonRect.width / 2 + 10}px) scale(0.5)`,
+opacity: 0.8
+}
+];
+
+const options = {
+duration: 800,
+easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
+fill: 'forwards'
+};
+
+animation.animate(keyframes, options).onfinish = () => {
+animation.remove();
+
+// Bounce cart icon
+cartIcon.animate([
+{ transform: 'scale(1)' },
+{ transform: 'scale(1.3)' },
+{ transform: 'scale(1)' }
+], {
+duration: 500,
+easing: 'ease-out'
+});
+};
+}
+
+// Checkout modal
+function showCheckoutModal() {
+if (cart.length === 0) return;
+
+checkoutModal.classList.add('active');
+checkoutFormContainer.style.display = 'block';
+paymentSuccess.style.display = 'none';
+payNowBtn.textContent = `Pay ${payAmount.textContent}`;
+}
+
+function processPayment() {
+// Validate form
+if (!validateCheckoutForm()) return;
+
+// Show loading state
+payNowBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+payNowBtn.disabled = true;
+
+/*
+PAYMENT INTEGRATION - Replace this with actual payment gateway code
+
+Sample Razorpay integration (commented out):
+
+const options = {
+key: 'YOUR_RAZORPAY_KEY',
+amount: getCartTotal() * 100, // in paise
+currency: 'INR',
+name: 'Lalit Digital Stores',
+description: 'Purchase of AI products',
+image: 'https://your-logo-url.com/logo.png',
+handler: function(response) {
+// Handle successful payment
+showPaymentSuccess();
+},
+prefill: {
+name: document.getElementById('name').value,
+email: document.getElementById('email').value,
+contact: document.getElementById('phone').value
+},
+notes: {
+address: document.getElementById('address').value
+},
+theme: {
+color: '#7c3aed'
+}
+};
+
+const rzp = new Razorpay(options);
+rzp.open();
+*/
+
+// For demo purposes, we'll simulate payment processing
+setTimeout(() => {
+showPaymentSuccess();
+}, 2000);
+}
+
+function validateCheckoutForm() {
+let isValid = true;
+
+// Name validation
+const name = document.getElementById('name');
+const nameError = document.getElementById('nameError');
+if (!name.value.trim()) {
+nameError.style.display = 'block';
+isValid = false;
+} else {
+nameError.style.display = 'none';
+}
+
+// Email validation
+const email = document.getElementById('email');
+const emailError = document.getElementById('emailError');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email.value)) {
+emailError.style.display = 'block';
+isValid = false;
+} else {
+emailError.style.display = 'none';
+}
+
+// Phone validation
+const phone = document.getElementById('phone');
+const phoneError = document.getElementById('phoneError');
+const phoneRegex = /^[0-9]{10,15}$/;
+if (!phoneRegex.test(phone.value)) {
+phoneError.style.display = 'block';
+isValid = false;
+} else {
+phoneError.style.display = 'none';
+}
+
+// Address validation
+const address = document.getElementById('address');
+const addressError = document.getElementById('addressError');
+if (!address.value.trim()) {
+addressError.style.display = 'block';
+isValid = false;
+} else {
+addressError.style.display = 'none';
+}
+
+return isValid;
+}
+
+function showPaymentSuccess() {
+checkoutFormContainer.style.display = 'none';
+paymentSuccess.style.display = 'block';
+payNowBtn.style.display = 'none';
+
+// Clear cart after successful payment
+setTimeout(() => {
+cart = [];
+updateCart();
+checkoutModal.classList.remove('active');
+payNowBtn.style.display = 'block';
+payNowBtn.disabled = false;
+payNowBtn.innerHTML = `Pay ${payAmount.textContent}`;
+}, 3000);
+}
+
+// Quick view modal
+function showQuickView(product) {
+quickViewContent.innerHTML = `
+<img src="${product.img}" alt="${product.name}" class="quick-view-img">
+<div class="quick-view-info">
+<h3 class="quick-view-title">${product.name}</h3>
+${product.rating}
+<p class="quick-view-price">₹${product.price.toLocaleString()}</p>
+<p class="quick-view-desc">${product.desc}</p>
+<button class="btn" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-img="${product.img}">Add to Cart</button>
+</div>
+`;
+
+quickViewModal.classList.add('active');
+
+// Add event listener to the quick view add to cart button
+const quickViewAddBtn = quickViewContent.querySelector('.btn');
+quickViewAddBtn.addEventListener('click', (e) => {
+const product = {
+id: e.target.dataset.id,
+name: e.target.dataset.name,
+price: parseInt(e.target.dataset.price),
+img: e.target.dataset.img,
+quantity: 1
+};
+
+addToCart(product);
+animateAddToCart(e.target);
+quickViewModal.classList.remove('active');
+});
+}
+
+// Contact form
+function handleContactSubmit(e) {
+e.preventDefault();
+
+if (!validateContactForm()) return;
+
+const name = document.getElementById('contactName').value;
+const email = document.getElementById('contactEmail').value;
+const message = document.getElementById('contactMessage').value;
+
+const subject = 'New Contact Form Submission';
+const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+
+window.location.href = `mailto:llkumar264@gmail.com?subject=${subject}&body=${body}`;
+}
+
+function validateContactForm() {
+let isValid = true;
+
+// Name validation
+const name = document.getElementById('contactName');
+const nameError = document.getElementById('contactNameError');
+if (!name.value.trim()) {
+nameError.style.display = 'block';
+isValid = false;
+} else {
+nameError.style.display = 'none';
+}
+
+// Email validation
+const email = document.getElementById('contactEmail');
+const emailError = document.getElementById('contactEmailError');
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailRegex.test(email.value)) {
+emailError.style.display = 'block';
+isValid = false;
+} else {
+emailError.style.display = 'none';
+}
+
+// Message validation
+const message = document.getElementById('contactMessage');
+const messageError = document.getElementById('contactMessageError');
+if (!message.value.trim()) {
+messageError.style.display = 'block';
+isValid = false;
+} else {
+messageError.style.display = 'none';
+}
+
+return isValid;
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80,
+behavior: 'smooth'
+});
+}
+});
+});
+
+// Initialize the app
+init();
+</script>
+</body>
+</html>
